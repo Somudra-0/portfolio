@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Somudra Biswas — self-taught developer from West Bengal, India. Building AI systems, automation tools, interactive web experiences, and software experiments." />
+  <title>Somudra Biswas — Builder & AI System Engineer</title>
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./glitch.css" />
+
+  <!-- Favicon inline SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>" />
+</head>
+<body>
+
+  <!-- ── Loading screen ─────────────────────────────────────── -->
+  <div id="loader" role="status" aria-live="polite">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:1.2rem;letter-spacing:.3em;color:#00ffcc;">
+      SOMUDRA.dev
+    </div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar"></div>
+    </div>
+    <div class="loader-label">Initialising shaders…</div>
+  </div>
+
+  <!-- ── WebGL canvas (Three.js) ───────────────────────────── -->
+  <canvas id="gl-canvas" aria-hidden="true"></canvas>
+
+  <!-- ── Decorative overlays ───────────────────────────────── -->
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="vignette"     aria-hidden="true"></div>
+
+  <!-- ── Parallax DOM layers ───────────────────────────────── -->
+  <div id="layer-bg"  class="parallax-layer" aria-hidden="true"></div>
+  <div id="layer-mid" class="parallax-layer" aria-hidden="true"></div>
+  <div id="layer-fg"  class="parallax-layer" aria-hidden="true"></div>
+
+  <!-- ── Navigation ────────────────────────────────────────── -->
+  <nav id="nav" aria-label="Primary navigation">
+    <a class="nav-logo" href="#hero">somudra.dev</a>
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Scrollable content ────────────────────────────────── -->
+  <div id="content">
+
+    <!-- ═══ HERO ═══════════════════════════════════════════ -->
+    <section id="hero" aria-labelledby="hero-heading">
+      <div class="hero-label">AI · SOFTWARE · AUTOMATION · EXPERIMENTS</div>
+
+      <h1 id="hero-heading" class="hero-title">
+        <span class="glitch-text" data-text="SOMUDRA">SOMUDRA</span>
+        <span class="glitch-text accent" data-text="BISWAS">BISWAS</span>
+        <span class="glitch-text hero-role" data-text="AI SYSTEM ENGINEER">AI SYSTEM ENGINEER</span>
+      </h1>
+
+      <p class="hero-sub">
+        Building AI systems, automation tools, interactive web
+        experiences, and software experiments — learning by doing,
+        breaking things, and figuring out how they work.
+      </p>
+
+      <div class="btn-group">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-outline" href="#about">About Me</a>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">Scroll</div>
+    </section>
+
+    <!-- ═══ ABOUT ═══════════════════════════════════════════ -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="about-text">
+        <h2 id="about-heading">
+          Learning by<br/>
+          <span>building</span><br/>
+          systems.
+        </h2>
+        <p>
+          I'm a student and independent developer exploring AI, software,
+          automation, and interactive technology. I learn by building real
+          projects, experimenting with ideas, and figuring out how things work.
+        </p>
+        <p>
+          My main project is Roro, a personal AI assistant I've been building
+          from the ground up. Alongside it, I explore machine learning,
+          automation, creative web experiences, software tools, and other
+          technical ideas.
+        </p>
+        <br/>
+        <a class="btn btn-outline" href="#projects" style="pointer-events:all">
+          See the projects →
+        </a>
+      </div>
+
+      <div class="stats-grid" role="list">
+        <div class="stat-card" role="listitem">
+          <div class="num">AI</div>
+          <div class="label">Systems &amp; ML</div>
+        </div>
+        <div class="stat-card" role="listitem">
+          <div class="num">Software</div>
+          <div class="label">Tools &amp; Applications</div>
+        </div>
+        <div class="stat-card" role="listitem">
+          <div class="num">Automation</div>
+          <div class="label">AI Tools</div>
+        </div>
+        <div class="stat-card" role="listitem">
+          <div class="num">⬡</div>
+          <div class="label">Web · Games · Prototypes</div>
+        </div>
+      </div>
+
+      <!-- Currently Exploring strip — spans full width below both columns -->
+      <div class="currently-exploring" aria-label="Currently exploring">
+        <span class="ce-label">Currently Exploring</span>
+        <span class="ce-items">Machine Learning &nbsp;·&nbsp; AI Systems &nbsp;·&nbsp; Automation</span>
+      </div>
+    </section>
+
+    <!-- ═══ PROJECTS ════════════════════════════════════════ -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <div class="section-header">
+        <span class="section-label">Things I'm Building</span>
+        <h2 id="projects-heading" class="section-title">Projects</h2>
+      </div>
+      <p class="section-subtitle">
+        A collection of systems, experiments, tools, and ideas I'm building while learning through practice.
+      </p>
+
+      <!-- Populated dynamically by main.js via projects.json -->
+      <div class="project-grid" role="list" aria-busy="true">
+        <!-- Skeleton placeholders while loading -->
+        <div style="height:360px;background:rgba(255,255,255,0.03);border-radius:8px;animation:pulse 1.5s infinite alternate;"></div>
+        <div style="height:360px;background:rgba(255,255,255,0.03);border-radius:8px;animation:pulse 1.5s .2s infinite alternate;"></div>
+        <div style="height:360px;background:rgba(255,255,255,0.03);border-radius:8px;animation:pulse 1.5s .4s infinite alternate;"></div>
+      </div>
+    </section>
+
+    <!-- ═══ CONTACT ══════════════════════════════════════════ -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">
+        Let's build<br/><span>something</span><br/>real.
+      </h2>
+      <p>
+        I'm open to conversations, collaborations, and interesting
+        problems. If you're building something unusual or just want
+        to talk tech — reach out through any of the links below.
+      </p>
+
+      <a class="btn btn-primary" style="margin-bottom:2.5rem;display:inline-flex"
+         href="mailto:somudrabiswas0@gmail.com">
+        somudrabiswas0@gmail.com
+      </a>
+
+      <div class="social-links" role="list">
+        <a class="social-link" href="https://github.com/Somudra-0" target="_blank" rel="noopener" role="listitem">GitHub</a>
+        <a class="social-link" href="https://x.com/somudra_0" target="_blank" rel="noopener" role="listitem">Twitter / X</a>
+        <a class="social-link" href="#" rel="noopener" role="listitem">LinkedIn</a>
+        <a class="social-link" href="https://www.instagram.com/somudra_0?stkn=dm9va2Z2Z2o4MGM0" target="_blank" rel="noopener" role="listitem">Instagram</a>
+      </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══════════════════════════════════════════ -->
+    <footer role="contentinfo">
+      <span>© 2026 Somudra Biswas — built with WebGL &amp; Three.js</span>
+      <span style="font-family:monospace;color:#00ffcc;">
+        ⬡ SHADERS: ACTIVE
+      </span>
+    </footer>
+  </div><!-- /#content -->
+
+  <!-- skeleton pulse style -->
+  <style>
+    @keyframes pulse {
+      from { opacity:.3 } to { opacity:.7 }
+    }
+  </style>
+
+  <!-- ── Scripts ────────────────────────────────────────────── -->
+  <!--
+    Three.js loaded as a classic global script (works on both file:// and http://).
+    main.js uses the global THREE variable — no ES module imports needed.
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="./main.js"></script>
+
+  <!-- Noscript fallback -->
+  <noscript>
+    <style>
+      #loader { display: none; }
+      body { background: #050508; color: #e8e8f0; font-family: sans-serif; }
+    </style>
+    <p style="text-align:center;padding:4rem;opacity:.6">
+      JavaScript is required for the full experience.
+    </p>
+  </noscript>
+</body>
+</html>

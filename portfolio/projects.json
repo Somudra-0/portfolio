@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "Roro",
+    "subtitle": "A personal AI companion built to understand, remember, and interact.",
+    "description": "An ongoing personal project combining conversation, memory, personality, reasoning, voice interaction, automation, computer interaction, and both local and online AI capabilities.\n\nRoro can act as a companion, but it can also handle assistant-like tasks and interact with different tools and systems. The project is focused on building something that can continuously evolve rather than simply behave like a conventional chatbot.",
+    "tags": ["AI Companion", "Memory", "Voice", "Automation"],
+    "image": "./img-roro.png",
+    "link": "#",
+    "status": "In Active Development",
+    "color": "#00ffcc"
+  },
+  {
+    "id": 2,
+    "title": "Roro Studio",
+    "subtitle": "Exploring AI-powered workflows for creative software.",
+    "description": "A project exploring how AI and automation can assist with video editing and other creative workflows across different editing software and tools.\n\nThe goal is to make complicated creative workflows easier to automate, experiment with, and control through intelligent systems.",
+    "tags": ["AI", "Video", "Automation", "Creative Tools"],
+    "image": "./img-roro-studio.png",
+    "link": "#",
+    "status": "In Development",
+    "color": "#ff00aa"
+  },
+  {
+    "id": 3,
+    "title": "Interactive Web Experiments",
+    "subtitle": "Web experiences built to move, react, and be explored.",
+    "description": "Experiments with animation, shaders, procedural visuals, interaction, and unconventional interfaces. This portfolio is itself part of that experimentation.",
+    "tags": ["JavaScript", "WebGL", "Three.js", "Creative Code"],
+    "image": "./img-web.png",
+    "link": "#",
+    "status": "Ongoing",
+    "color": "#ffaa00"
+  },
+  {
+    "id": 4,
+    "title": "Games & Experiments",
+    "subtitle": "Small ideas built to see what happens.",
+    "description": "Games, prototypes, interactive experiments, and random technical ideas built for learning and exploration. Some become finished projects. Others exist simply because they were interesting enough to build.",
+    "tags": ["Game Dev", "JavaScript", "Prototypes"],
+    "image": "./img-games.png",
+    "link": "#",
+    "status": "Experimental",
+    "color": "#aa00ff"
+  }
+]
